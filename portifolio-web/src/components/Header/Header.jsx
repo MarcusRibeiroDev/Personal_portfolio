@@ -7,8 +7,8 @@ import brand_logo from '../../assets/images/brand_logo.png';
 const Header = () => {
   return (
     <>
-      <header className="header-component">
-        <nav className="row bg-secondary">
+      <header className="header-component bg-secondary">
+        <nav className="row">
           <div className="col d-flex align-content-center justify-content-start">
             <a href="...">
               <img src={brand_logo} alt="imagem que leva a home" className="img-styles" />

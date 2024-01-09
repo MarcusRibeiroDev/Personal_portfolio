@@ -1,0 +1,40 @@
+.Apresentation {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-main {
+    display: flex;
+    flex-direction: column;
+    justify-items: start;
+    align-items: start;
+}
+
+.container-main span {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 12.4em;
+    display: inline-block;
+    line-height: 1;
+}
+
+.container-main p {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.6em;
+    display: inline-block;
+}
+
+.container-main div div img{
+    height: 4.6em;
+}
+
+.container-images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6em;
+    margin-left: 1em;
+}
+

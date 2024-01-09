@@ -1,4 +1,5 @@
 import './App.css';
+import Apresentation from './components/Apresentation/Apresentation';
 import Header from './components/Header/Header';
 
 // Bootstrap JS and CSS
@@ -9,6 +10,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <Apresentation />
     </div>
   );
 }
