@@ -1,0 +1,26 @@
+.Projects {
+    padding: 5em 0;
+}
+
+.colCss {
+    height: 30em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.colCss img {
+    height: 18em;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.6em;
+    padding-top: 1em;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4em;
+}

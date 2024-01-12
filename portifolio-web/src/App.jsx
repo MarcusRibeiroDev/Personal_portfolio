@@ -1,6 +1,7 @@
 import './App.css';
 import Apresentation from './components/Apresentation/Apresentation';
 import Header from './components/Header/Header';
+import Projects from './components/Projects/Projects';
 
 // Bootstrap JS and CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -11,6 +12,7 @@ function App() {
     <div className="App">
       <Header />
       <Apresentation />
+      <Projects />
     </div>
   );
 }
