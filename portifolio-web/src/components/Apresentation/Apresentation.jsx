@@ -8,7 +8,9 @@ const Apresentation = () => {
     <main className="Apresentation">
       <div className="containerWidth">
         <div className="container-main">
-          <p className="">Marcus aqui✌️ Saudações</p>
+          <p className="">
+            Marcus aqui <span className="animationHi">✌️</span> Saudações
+          </p>
           <span>Desenvolvedor</span>
           <div className="d-flex">
             <span>Full-Stack</span>
@@ -24,6 +26,10 @@ const Apresentation = () => {
               </a>
             </div>
           </div>
+          <p>
+            Estudo o desenvolvimento front-end e back-end a cerca de 1 ano e meio
+            <br /> estou no meu 5º semestre da graduação
+          </p>
         </div>
       </div>
     </main>

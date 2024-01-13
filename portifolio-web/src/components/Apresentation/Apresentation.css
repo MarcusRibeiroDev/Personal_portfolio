@@ -39,3 +39,21 @@
     margin-left: 1em;
 }
 
+@keyframes jumpAnimation {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    25%, 75% {
+        transform: translateY(-20px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+  }
+  
+  /* Aplicando a animação ao elemento desejado */
+  .animationHi {
+    animation: jumpAnimation 2s infinite;
+    font-size: 1.4em !important;
+  }
+

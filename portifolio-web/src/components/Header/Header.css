@@ -10,12 +10,11 @@ nav {
 }
 
 .img-styles {
-    height: 80px;
-    width: 80px;
+    height: 6em;
 }
 
 .header-component ul li {
-    margin-right: 4em;
+    margin-right: 2.8em;
     display: flex;
     align-items: center;
 }
@@ -25,7 +24,7 @@ nav {
    text-decoration: none;
    color: #fff;
    font-weight: 700;
-   font-size: 1.2em;
+   font-size: 1em;
    transition: color 0.2s ease, margin-bottom 0.2s ease;
 }
 
@@ -36,4 +35,14 @@ nav {
 .header-component ul{
     padding: 0;
     margin: 0;
+}
+
+/* Media query para telas entre 680px e 426px */
+@media (max-width: 680px) and (min-width: 426px) {
+    .header-component ul li a {
+        font-size: 0.36em !important;
+    }
+    .img-styles {
+        height: 2.8em;
+    }
 }

@@ -7,3 +7,45 @@
     width: 90%;
     margin: 0 auto;
 }
+
+/* Media query para telas entre 1440px e 1221px */
+@media (max-width: 1440px) and (min-width: 1221px) {
+    body {
+      font-size: 1em;
+    }
+}
+  
+/* Media query para telas entre 1220px e 901px */
+@media (max-width: 1220px) and (min-width: 901px) {
+    body {
+      font-size: 0.8em;
+    }
+}
+
+/* Media query para telas entre 900px e 769px */
+@media (max-width: 900px) and (min-width: 769px) {
+    body {
+      font-size: 0.7em;
+    }
+}
+  
+/* Media query para telas entre 768px e 681px */
+@media (max-width: 768px) and (min-width: 681px) {
+    body {
+      font-size: 0.6em;
+    }
+}
+  
+/* Media query para telas entre 680px e 426px */
+@media (max-width: 680px) and (min-width: 426px) {
+  body {
+    font-size: 0.45em;
+  }
+}
+
+/* Estilos para telas menores que 426px (como dispositivos móveis) */
+@media (max-width: 425px) {
+    body {
+      font-size: 0.4em; /* ou qualquer outro valor desejado */
+    }
+}
