@@ -55,5 +55,30 @@
   .animationHi {
     animation: jumpAnimation 2s infinite;
     font-size: 1.4em !important;
-  }
+}
+
+/* Estilos para telas menores que 426px (como dispositivos móveis) */
+@media (max-width: 425px) {
+    .container-subtitles {
+        flex-direction: column;
+        margin-bottom: 3em;
+    }
+
+    .container-images a img{
+        height: 6.8em !important;
+    }
+
+    .container-images {
+        justify-content: start;
+        margin: 0;
+    }
+
+    .container-main span {
+        font-size: 8.8em;
+    }
+
+    .Apresentation{
+        height: 60vh;
+    }
+}
 

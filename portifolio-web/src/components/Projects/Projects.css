@@ -24,3 +24,18 @@ p {
     font-family: 'Roboto', sans-serif;
     font-size: 1.4em;
 }
+
+/* Estilos para telas menores que 426px (como dispositivos móveis) */
+@media (max-width: 425px) {
+    .imgMobile {
+        height: 26em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imgMobile img {
+        height: 14rem;
+    }
+}

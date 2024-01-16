@@ -1,12 +1,13 @@
+// Hooks
 import { useState, useEffect } from 'react';
 
-//CSS
-import './Header.css';
+// CSS
+import './Navbar.css';
 
-//Images
+// Images
 import brand_logo from '../../assets/images/brand_logo.png';
 
-const Header = () => {
+const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -39,19 +40,19 @@ const Header = () => {
             </div>
             {!isMobile && (
               <>
-                <div className="col d-flex align-content-center justify-content-center ">
+                <div className="col d-flex align-items-center justify-content-center">
                   <ul className="list-unstyled d-flex">
                     <li>
-                      <a href="...">Conheça-me</a>
+                      <a href="#">Conheça-me</a>
                     </li>
                     <li>
-                      <a href="...">Competências</a>
+                      <a href="#">Competências</a>
                     </li>
                     <li>
-                      <a href="...">Experiência</a>
+                      <a href="#">Experiência</a>
                     </li>
                     <li className="me-0">
-                      <a href="...">Contato</a>
+                      <a href="#">Contato</a>
                     </li>
                   </ul>
                 </div>
@@ -61,31 +62,34 @@ const Header = () => {
               <>
                 <div className="col d-flex justify-content-end align-items-center p-0">
                   <button
-                    className="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarToggleExternalContent"
-                    aria-controls="navbarToggleExternalContent"
-                    aria-expanded="true"
-                    aria-label="Toggle navigation"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasExample"
+                    aria-controls="offcanvasExample"
                   >
-                    <i className="bi bi-list fs-4 "></i>
+                    OFFCANVAS
                   </button>
                 </div>
-                <ul className="list-unstyled collapse" id="navbarToggleExternalContent">
-                  <li>
-                    <a href="...">Conheça-me</a>
-                  </li>
-                  <li>
-                    <a href="...">Competências</a>
-                  </li>
-                  <li>
-                    <a href="...">Experiência</a>
-                  </li>
-                  <li className="me-0">
-                    <a href="...">Contato</a>
-                  </li>
-                </ul>
+                <div
+                  className="offcanvas offcanvas-start"
+                  tabIndex="-1"
+                  id="offcanvasExample"
+                  aria-labelledby="offcanvasExampleLabel"
+                >
+                  <ol className="offcanvas-body">
+                    <li>
+                      <a href="#">Conheça-me</a>
+                    </li>
+                    <li>
+                      <a href="#">Competências</a>
+                    </li>
+                    <li>
+                      <a href="#">Experiência</a>
+                    </li>
+                    <li className="me-0">
+                      <a href="#">Contato</a>
+                    </li>
+                  </ol>
+                </div>
               </>
             )}
           </nav>
@@ -95,6 +99,4 @@ const Header = () => {
   );
 };
 
-export default Header;
-
-// CORRIGIR PARADA DE ELE EMPURRAR CONTEUDO PRA CIMA
+export default Navbar;

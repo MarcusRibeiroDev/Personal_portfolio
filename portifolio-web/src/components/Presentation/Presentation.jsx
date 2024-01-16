@@ -1,9 +1,9 @@
-import './Apresentation.css';
+import './Presentation.css';
 
 //Images
 import brand_logo from '../../assets/images/brand_logo.png';
 
-const Apresentation = () => {
+const Presentation = () => {
   return (
     <main className="Apresentation">
       <div className="containerWidth">
@@ -12,7 +12,7 @@ const Apresentation = () => {
             Marcus aqui <span className="animationHi">✌️</span> Saudações
           </p>
           <span>Desenvolvedor</span>
-          <div className="d-flex">
+          <div className="d-flex container-subtitles">
             <span>Full-Stack</span>
             <div className="container-images">
               <a href="...">
@@ -36,4 +36,4 @@ const Apresentation = () => {
   );
 };
 
-export default Apresentation;
+export default Presentation;
