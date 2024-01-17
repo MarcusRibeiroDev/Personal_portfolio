@@ -10,93 +10,67 @@ import cellTablet from '../../assets/images/Cell_Tablet.png';
 const Projects = () => {
   const [isMobile, setIsMobile] = useState(false);
 
+  const projectsInfo = [
+    {
+      id: 1,
+      purpose: 'Cliente',
+      description: 'Site para fazer pedidos em um lanchonete',
+      altImage: 'Thumb do projeto de lanchonete',
+    },
+    {
+      id: 2,
+      purpose: 'Cliente',
+      description: 'Site para destribuição de e-books e audiobooks',
+      altImage: 'Thumb do projeto de e-books e audiobooks',
+    },
+    {
+      id: 3,
+      purpose: 'Estudo',
+      description: 'E-commerce de loja de sapatos',
+      altImage: 'Thumb do projeto de loja de sapatos',
+    },
+    {
+      id: 4,
+      purpose: 'Estudo',
+      description: 'Blog pessoal',
+      altImage: 'Thumb do projeto de blog',
+    },
+  ];
+
+  // Método para checar tamanho da tela e trocar para versão mobile
   useEffect(() => {
     const handleResize = () => {
       const windowWidth = window.innerWidth;
-      setIsMobile(windowWidth <= 425); // Considerando 768 pixels como largura para tela de celular, ajuste conforme necessário
+      setIsMobile(windowWidth <= 425);
     };
 
-    // Adiciona um ouvinte de evento para redimensionamento da tela
     window.addEventListener('resize', handleResize);
 
-    // Chama a função para verificar o tamanho da tela quando o componente é montado
     handleResize();
 
-    // Remove o ouvinte de evento ao desmontar o componente
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, []); // O segundo argumento vazio garante que o efeito só seja executado uma vez durante a montagem
+  }, []);
 
   return (
     <div className="Projects">
       <div className="containerWidth">
         <h2 className="text-center pb-2 ">Projetos</h2>
-        {!isMobile && (
-          <div className="row row-cols-2 flex-wrap">
-            <div className="col colCss">
-              <a href="#">
-                <img src={cellTablet} alt="thumb do projeto#" />
-              </a>
-              <h3>Cliente</h3>
-              <p>Site para fazer pedidos em um lanchonete</p>
-            </div>
-            <div className="col colCss">
-              <a href="#">
-                <img src={cellTablet} alt="thumb do projeto#" />
-              </a>
-              <h3>Cliente</h3>
-              <p>Site para emular e avaliar jogos retro</p>
-            </div>
-            <div className="col colCss">
-              <a href="#">
-                <img src={cellTablet} alt="thumb do projeto#" />
-              </a>
-              <h3>Estudo</h3>
-              <p>E-commerce de sapatos</p>
-            </div>
-            <div className="col colCss">
-              <a href="#">
-                <img src={cellTablet} alt="thumb do projeto#" />
-              </a>
-              <h3>Estudo</h3>
-              <p>Blog pessoal</p>
-            </div>
-          </div>
-        )}
 
-        {isMobile && (
-          <div className="display-flex flex-column flex-wrap">
-            <div className="imgMobile">
+        <div
+          className={!isMobile ? 'row row-cols-2 flex-wrap' : 'display-flex flex-column flex-wrap'}
+        >
+          {projectsInfo.map((project) => (
+            <div key={project.id} className={!isMobile ? 'col colCss' : 'imgMobile'}>
               <a href="#">
-                <img src={cellTablet} alt="thumb do projeto#" />
+                <img src={cellTablet} alt={project.altImage} />
               </a>
-              <h3>Cliente</h3>
-              <p>Site para fazer pedidos em um lanchonete</p>
+              <h3>{project.purpose}</h3>
+              <p>{project.description}</p>
             </div>
-            <div className="imgMobile">
-              <a href="#">
-                <img src={cellTablet} alt="thumb do projeto#" />
-              </a>
-              <h3>Cliente</h3>
-              <p>Site para emular e avaliar jogos retro</p>
-            </div>
-            <div className="imgMobile">
-              <a href="#">
-                <img src={cellTablet} alt="thumb do projeto#" />
-              </a>
-              <h3>Estudo</h3>
-              <p>E-commerce de sapatos</p>
-            </div>
-            <div className="imgMobile">
-              <a href="#">
-                <img src={cellTablet} alt="thumb do projeto#" />
-              </a>
-              <h3>Estudo</h3>
-              <p>Blog pessoal</p>
-            </div>
-          </div>
-        )}
+          ))}
+        </div>
       </div>
     </div>
   );
