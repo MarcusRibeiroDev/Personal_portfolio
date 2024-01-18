@@ -1,11 +1,29 @@
+// CSS
 import './Presentation.css';
 
-//Images
-import brand_logo from '../../assets/images/brand_logo.png';
-import { useState } from 'react';
+// Hooks
+import { useState, useEffect } from 'react';
 
 const Presentation = () => {
   const [languageVideo, setLanguageVideo] = useState(true);
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Método para checar tamanho da tela e trocar para versão mobile
+  useEffect(() => {
+    const handleResize = () => {
+      const windowWidth = window.innerWidth;
+      setIsMobile(windowWidth <= 425);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    handleResize();
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <main className="Apresentation">
@@ -40,19 +58,6 @@ const Presentation = () => {
               </video>
             )}
           </div>
-          {/* <div className="d-flex container-subtitles">
-            <div className="container-images">
-              <a href="...">
-                <img src={brand_logo} alt="Link do github" />
-              </a>
-              <a href="...">
-                <img src={brand_logo} alt="Link do linkedin" />
-              </a>
-              <a href="...">
-                <img src={brand_logo} alt="Link do currículo" />
-              </a>
-            </div>
-          </div> */}
         </div>
       </div>
     </main>

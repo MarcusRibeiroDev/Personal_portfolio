@@ -43,9 +43,6 @@ const Navbar = () => {
                 <div className="col d-flex align-items-center justify-content-center">
                   <ul className="list-unstyled d-flex">
                     <li>
-                      <a href="#">Conheça-me</a>
-                    </li>
-                    <li>
                       <a href="#">Competências</a>
                     </li>
                     <li>
@@ -76,9 +73,6 @@ const Navbar = () => {
                   aria-labelledby="offcanvasExampleLabel"
                 >
                   <ol className="offcanvas-body">
-                    <li>
-                      <a href="#">Conheça-me</a>
-                    </li>
                     <li>
                       <a href="#">Competências</a>
                     </li>

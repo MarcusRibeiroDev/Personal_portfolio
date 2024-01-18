@@ -56,8 +56,6 @@ const Projects = () => {
   return (
     <div className="Projects">
       <div className="containerWidth">
-        <h2 className="text-center pb-2 ">Projetos</h2>
-
         <div
           className={!isMobile ? 'row row-cols-2 flex-wrap' : 'display-flex flex-column flex-wrap'}
         >
