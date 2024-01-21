@@ -5,18 +5,55 @@
     justify-content: center;
     align-items: center;
     background-color: #ccc;
+    flex-direction: column;
+    position: relative;
 }
 
 span {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 9.6em;
-    display: inline-block;
+    font-size: 10.5rem;
     line-height: 1;
 }
 
 video {
-    height: 24rem;
-    width: 90%;
+    height: 20rem;
+}
+
+.div-video {
+    max-width: 35%;
+    padding: 0rem;
+}
+
+.toggle-container {
+    width: 4.375rem; /* 70px em rem */
+    height: 1.875rem; /* 30px em rem */
+    border-radius: 0.9375rem; /* 15px em rem */
+    background-color: #000000;
+    cursor: pointer;
+    overflow: hidden;
+}
+  
+.toggle-ball {
+    position: absolute;
+    width: 1.875rem; /* 30px em rem */
+    height: 1.875rem; /* 30px em rem */
+    border-radius: 0.9375rem; /* 15px em rem */
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+}
+  
+.toggle-container.true .toggle-ball {
+    transform: translateX(2.5rem); /* 40px em rem */
+}
+
+.language-container {
+    top: 1rem; /* 10px em rem */
+    right: 1rem; /* 10px em rem */
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 @keyframes jumpAnimation {
@@ -37,28 +74,51 @@ video {
     font-size: 1.4em !important;
 }
 
-/* Estilos para telas menores que 426px (como dispositivos móveis) */
-@media (max-width: 425px) {
-    .container-subtitles {
-        flex-direction: column;
-        margin-bottom: 3em;
+/* Estilos para telas menores que 1024px */
+@media (max-width: 1024px) {
+
+    .Apresentation{
+        height: 70vh;
     }
 
-    .container-images a img{
-        height: 6.8em !important;
+    span {
+        font-size: 8.5rem;
     }
 
-    .container-images {
-        justify-content: start;
-        margin: 0;
+    .div-video {
+        max-width: 40%;
     }
+}
 
-    .container-main span {
-        font-size: 8.8em;
-    }
+/* Estilos para telas menores que 425px (como dispositivos móveis) */
+@media (max-width: 768px) {
 
     .Apresentation{
         height: 60vh;
+    }
+
+    span {
+        font-size: 7.5rem;
+    }
+
+    .div-video {
+        max-width: 40%;
+    }
+}
+
+/* Estilos para telas menores que 426px (como dispositivos móveis) */
+@media (max-width: 425px) {
+
+    .Apresentation{
+        height: 50vh;
+    }
+
+    span {
+        font-size: 10rem;
+    }
+
+    .div-video {
+        max-width: 60%;
     }
 }
 
