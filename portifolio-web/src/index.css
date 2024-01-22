@@ -22,21 +22,21 @@ html  {
 /* Media query para telas entre 1220px e 901px */
 @media (max-width: 1220px) and (min-width: 901px) {
     html {
-      font-size: 0.8rem;
+      font-size: 0.9rem;
     }
 }
 
 /* Media query para telas entre 900px e 769px */
 @media (max-width: 900px) and (min-width: 769px) {
     html {
-      font-size: 0.7rem;
+      font-size: 0.8rem;
     }
 }
   
 /* Media query para telas entre 768px e 681px */
 @media (max-width: 768px) and (min-width: 681px) {
     html {
-      font-size: 0.65rem;
+      font-size: 0.7rem;
     }
 }
   

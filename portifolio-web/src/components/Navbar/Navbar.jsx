@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import './Navbar.css';
 
 // Images
-import brand_logo from '../../assets/images/brand_logo.png';
+import brand_logo from '../../assets/images/Icon-home.png';
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -30,7 +30,7 @@ const Navbar = () => {
 
   return (
     <>
-      <header className="header-component bg-secondary">
+      <header className="header-component">
         <div className="containerWidth">
           <nav className="row">
             <div className="col d-flex align-content-center justify-content-start">
@@ -40,15 +40,18 @@ const Navbar = () => {
             </div>
             {!isMobile && (
               <>
-                <div className="col d-flex align-items-center justify-content-center">
+                <div className="col d-flex align-items-center justify-content-end">
                   <ul className="list-unstyled d-flex">
                     <li>
-                      <a href="#">Competências</a>
+                      <i className="bi bi-person-fill"></i>
+                      <a href="#">Sobre mim</a>
                     </li>
                     <li>
+                      <i className="bi bi-book-half"></i>
                       <a href="#">Experiência</a>
                     </li>
                     <li className="me-0">
+                      <i className="bi bi-envelope-at-fill"></i>
                       <a href="#">Contato</a>
                     </li>
                   </ul>
@@ -63,7 +66,7 @@ const Navbar = () => {
                     data-bs-target="#offcanvasExample"
                     aria-controls="offcanvasExample"
                   >
-                    OFFCANVAS
+                    <i className="bi bi-list"></i>
                   </button>
                 </div>
                 <div
