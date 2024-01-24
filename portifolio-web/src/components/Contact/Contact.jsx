@@ -6,8 +6,8 @@ import brand_logo from '../../assets/images/brand_logo.png';
 
 const Contact = () => {
   return (
-    <div className="Contact bg-secondary">
-      <div className="containerWidth text-center ">
+    <div className="bg-secondary">
+      <div className="containerWidth text-center">
         <div className="contact-container">
           <div className="">
             <h2>Contatos</h2>
@@ -30,7 +30,6 @@ const Contact = () => {
             </a>
           </div>
         </div>
-        <p className="p-2 m-0">Portifólio Marcus Ribeiro &copy; 2024</p>
       </div>
     </div>
   );

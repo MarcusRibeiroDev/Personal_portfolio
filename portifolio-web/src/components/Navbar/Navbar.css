@@ -1,93 +1,46 @@
-.header-component {
-    height: 15vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #392d5d;
-    border-bottom: solid 2px white;
-    font-family: 'Lato', sans-serif;
-}
-
-nav {
-    width: 100%;
-}
-
-.img-styles {
-    height: 7rem;
-}
-
-.header-component ul li {
-    margin-right: 3rem;
+header {
     display: flex;
     align-items: center;
-    transition: margin-bottom 0.2s ease, font-size 0.2s ease;
+    justify-content: space-between;
+    background-color: #fffbf2;
 }
 
-.header-component ul li:hover{
-    margin-bottom: 0.3rem;
-    font-size: 1.2rem;
-}
-
-.header-component ul li i {
-    margin-right: 8px;
-    font-size: 1rem;
-    color: #ffe52a;
-}
-
-.header-component ul li a {
-   text-decoration: none;
-   color: white;
-   font-weight: 700;
-   font-size: 1rem;
-   transition: color 0.2s ease, margin-bottom 0.2s ease;
-}
-
-.header-component ul{
-    padding: 0;
-    margin: 0;
-}
-
-/*Bootstrap adaptations*/
-
-#offcanvasExample {
-    width: 60%;
-}
-
-#offcanvasExample li a {
-    font-size: 1.2rem;
-    color: black;
-    text-decoration: underline;
-}
-
-#offcanvasExample li {
-    height: 6rem;
-    display: flex;
-    align-items: center;
-}
-
-#offcanvasExample li:hover {
-    border-bottom: 2px solid black;
-    font-size: 1.3rem;
-}
-
-button {
-    background: none;
-    height: 3rem;
-    width: 4rem;
+li {
     display: inline-flex;
-    justify-content: center;
-    align-items: center;
 }
 
-button i {
-    font-size: 2.5rem;
-    color: #08deff;
+.custom-a{
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    margin: 0 2rem;
+    color: rgb(15, 15, 15);
+    font-weight: 600;
+    font-size: 1.4rem;
 }
 
-/* Estilos para telas menores que 426px (como dispositivos móveis) */
-@media (max-width: 425px) {
-    .header-component {
-        height: 10vh;
-    }
+.custom-a:focus, .custom-a:hover {
+    color: goldenrod;
+}
 
+
+.toggle-container {
+    width: 4.375rem; /* 70px em rem */
+    height: 1.875rem; /* 30px em rem */
+    border-radius: 0.9375rem; /* 15px em rem */
+    background-color: #000000;
+    cursor: pointer;
+    overflow: hidden;
+}
+  
+.toggle-ball {
+    position: absolute;
+    width: 1.875rem; /* 30px em rem */
+    height: 1.875rem; /* 30px em rem */
+    border-radius: 0.9375rem; /* 15px em rem */
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+}
+  
+.toggle-container.true .toggle-ball {
+    transform: translateX(2.5rem); /* 40px em rem */
 }

@@ -1,11 +1,5 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
 .containerWidth {
-    width: 80%;
-    margin: 0 auto;
+    padding: 0rem 8rem;
 }
 
 html  {
@@ -52,4 +46,7 @@ html  {
     html {
       font-size: 0.4rem; /* ou qualquer outro valor desejado */
     }
+    .containerWidth {
+      padding: 0rem 2rem;
+  }
 }

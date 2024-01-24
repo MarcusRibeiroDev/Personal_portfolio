@@ -1,98 +1,49 @@
-// Hooks
-import { useState, useEffect } from 'react';
-
 // CSS
 import './Navbar.css';
 
-// Images
-import brand_logo from '../../assets/images/Icon-home.png';
+// Hooks
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 const Navbar = () => {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isTrue, setIsTrue] = useState(false);
 
-  useEffect(() => {
-    const handleResize = () => {
-      const windowWidth = window.innerWidth;
-      setIsMobile(windowWidth <= 425); // Considerando 768 pixels como largura para tela de celular, ajuste conforme necessário
-    };
+  const toggleState = () => {
+    setIsTrue(!isTrue);
+  };
 
-    // Adiciona um ouvinte de evento para redimensionamento da tela
-    window.addEventListener('resize', handleResize);
-
-    // Chama a função para verificar o tamanho da tela quando o componente é montado
-    handleResize();
-
-    // Remove o ouvinte de evento ao desmontar o componente
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []); // O segundo argumento vazio garante que o efeito só seja executado uma vez durante a montagem
+  //const [languageVideo, setLanguageVideo] = useState(true);
 
   return (
-    <>
-      <header className="header-component">
-        <div className="containerWidth">
-          <nav className="row">
-            <div className="col d-flex align-content-center justify-content-start">
-              <a href="...">
-                <img src={brand_logo} alt="imagem que leva a home" className="img-styles" />
-              </a>
-            </div>
-            {!isMobile && (
-              <>
-                <div className="col d-flex align-items-center justify-content-end">
-                  <ul className="list-unstyled d-flex">
-                    <li>
-                      <i className="bi bi-person-fill"></i>
-                      <a href="#">Sobre mim</a>
-                    </li>
-                    <li>
-                      <i className="bi bi-book-half"></i>
-                      <a href="#">Experiência</a>
-                    </li>
-                    <li className="me-0">
-                      <i className="bi bi-envelope-at-fill"></i>
-                      <a href="#">Contato</a>
-                    </li>
-                  </ul>
-                </div>
-              </>
-            )}
-            {isMobile && (
-              <>
-                <div className="col d-flex justify-content-end align-items-center p-0">
-                  <button
-                    data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasExample"
-                    aria-controls="offcanvasExample"
-                  >
-                    <i className="bi bi-list"></i>
-                  </button>
-                </div>
-                <div
-                  className="offcanvas offcanvas-start"
-                  tabIndex="-1"
-                  id="offcanvasExample"
-                  aria-labelledby="offcanvasExampleLabel"
-                >
-                  <ol className="offcanvas-body">
-                    <li>
-                      <a href="#">Competências</a>
-                    </li>
-                    <li>
-                      <a href="#">Experiência</a>
-                    </li>
-                    <li className="me-0">
-                      <a href="#">Contato</a>
-                    </li>
-                  </ol>
-                </div>
-              </>
-            )}
-          </nav>
-        </div>
-      </header>
-    </>
+    <header className="containerWidth">
+      <div className={`toggle-container ${isTrue ? 'true' : ''}`} onClick={toggleState}>
+        <div className="toggle-ball"></div>
+      </div>
+      <nav className="nav navbar">
+        <ul className="nav nav-tabs list-unstyled d-flex my-1">
+          <li className="nav-item">
+            <Link to="/" className="nav-link active custom-a" aria-current="page">
+              Home
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="about" className="nav-link custom-a">
+              Sobre mim
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="projects" className="nav-link custom-a">
+              Experiência
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="contact" className="nav-link custom-a">
+              Contato
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    </header>
   );
 };
 

@@ -1,10 +1,9 @@
-.Apresentation {
-    width: 100%;
-    height: 85vh;
+.Home {
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ccc;
+    background-color: #fffbf2;
     flex-direction: column;
     position: relative;
 }
@@ -22,38 +21,6 @@ video {
 .div-video {
     max-width: 35%;
     padding: 0rem;
-}
-
-.toggle-container {
-    width: 4.375rem; /* 70px em rem */
-    height: 1.875rem; /* 30px em rem */
-    border-radius: 0.9375rem; /* 15px em rem */
-    background-color: #000000;
-    cursor: pointer;
-    overflow: hidden;
-}
-  
-.toggle-ball {
-    position: absolute;
-    width: 1.875rem; /* 30px em rem */
-    height: 1.875rem; /* 30px em rem */
-    border-radius: 0.9375rem; /* 15px em rem */
-    background-color: #fff;
-    transition: transform 0.3s ease-in-out;
-}
-  
-.toggle-container.true .toggle-ball {
-    transform: translateX(2.5rem); /* 40px em rem */
-}
-
-.language-container {
-    top: 1rem; /* 10px em rem */
-    right: 1rem; /* 10px em rem */
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
 }
 
 @keyframes jumpAnimation {
