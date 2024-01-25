@@ -1,91 +1,88 @@
 .Home {
     height: 100vh;
+    background-color: #fffbf2;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fffbf2;
-    flex-direction: column;
-    position: relative;
+}
+
+.containerHome {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
 span {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 10.5rem;
+    font-size: 10rem;
     line-height: 1;
 }
 
+p {
+    font-family: 'Lato', sans-serif !important;
+}
+
 video {
-    height: 20rem;
+    height: 35rem;
+    width: 25rem;
+    border: 3px solid goldenrod;
 }
 
-.div-video {
-    max-width: 35%;
-    padding: 0rem;
-}
-
-@keyframes jumpAnimation {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    25%, 75% {
-        transform: translateY(-20px);
-    }
-    50% {
-        transform: translateY(0);
-    }
+.animationHi {
+    display: inline-block;
+    font-size: 1.5em;
+    animation: bounce 0.5s infinite alternate;
   }
   
-  /* Aplicando a animação ao elemento desejado */
-  .animationHi {
-    animation: jumpAnimation 2s infinite;
-    font-size: 1.4em !important;
-}
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+
 
 /* Estilos para telas menores que 1024px */
 @media (max-width: 1024px) {
-
-    .Apresentation{
-        height: 70vh;
-    }
 
     span {
         font-size: 8.5rem;
     }
 
-    .div-video {
-        max-width: 40%;
-    }
 }
 
 /* Estilos para telas menores que 425px (como dispositivos móveis) */
 @media (max-width: 768px) {
 
-    .Apresentation{
-        height: 60vh;
-    }
-
     span {
         font-size: 7.5rem;
     }
 
-    .div-video {
-        max-width: 40%;
-    }
 }
 
 /* Estilos para telas menores que 426px (como dispositivos móveis) */
 @media (max-width: 425px) {
 
-    .Apresentation{
-        height: 50vh;
+    .containerHome {
+        flex-direction: column;
+        align-items: start;
+        gap: 5rem;
     }
 
     span {
-        font-size: 10rem;
+        font-size: 7rem;
     }
 
-    .div-video {
-        max-width: 60%;
+    video {
+        height: 30rem;
+        width: 40rem;
+        margin: auto;
+    }
+
+    .Home {
+        max-height: 85vh;
     }
 }
 

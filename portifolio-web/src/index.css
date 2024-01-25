@@ -1,5 +1,11 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .containerWidth {
-    padding: 0rem 8rem;
+    padding: 0rem 6rem;
 }
 
 html  {
@@ -9,28 +15,28 @@ html  {
 /* Media query para telas entre 1440px e 1221px */
 @media (max-width: 1440px) and (min-width: 1221px) {
     html {
-      font-size: 1rem;
+      font-size: 14px;
     }
 }
   
 /* Media query para telas entre 1220px e 901px */
 @media (max-width: 1220px) and (min-width: 901px) {
     html {
-      font-size: 0.9rem;
+      font-size: 12px;
     }
 }
 
 /* Media query para telas entre 900px e 769px */
 @media (max-width: 900px) and (min-width: 769px) {
     html {
-      font-size: 0.8rem;
+      font-size: 1rem;
     }
 }
   
 /* Media query para telas entre 768px e 681px */
 @media (max-width: 768px) and (min-width: 681px) {
     html {
-      font-size: 0.7rem;
+      font-size: 10px;
     }
 }
   

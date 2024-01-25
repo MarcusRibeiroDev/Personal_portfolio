@@ -2,8 +2,8 @@
 import './Navbar.css';
 
 // Hooks
-import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isTrue, setIsTrue] = useState(false);
@@ -22,7 +22,7 @@ const Navbar = () => {
       <nav className="nav navbar">
         <ul className="nav nav-tabs list-unstyled d-flex my-1">
           <li className="nav-item">
-            <Link to="/" className="nav-link active custom-a" aria-current="page">
+            <Link to="/" className="nav-link active custom-a custom-active" aria-current="page">
               Home
             </Link>
           </li>
