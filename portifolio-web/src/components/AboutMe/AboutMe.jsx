@@ -4,7 +4,15 @@ import './AboutMe.css';
 //Images
 import brand_logo from '../../assets/images/brand_logo.png';
 
+import { useContext } from 'react';
+
+import { StateContext } from '../../Contexts/languagePage';
+
 const AboutMe = () => {
+  const { language } = useContext(StateContext);
+
+  console.log(language);
+
   return (
     <div className="AboutMe bg-secondary">
       <div className="containerWidth text-center ">

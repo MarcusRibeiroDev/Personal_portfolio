@@ -2,17 +2,22 @@
 import './Navbar.css';
 
 // Hooks
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
+
+import { StateContext } from '../../Contexts/languagePage';
 
 const Navbar = () => {
   const [isTrue, setIsTrue] = useState(false);
+  const { language, setLanguage } = useContext(StateContext);
 
   const toggleState = () => {
     setIsTrue(!isTrue);
+    setLanguage(!isTrue);
   };
 
-  //const [languageVideo, setLanguageVideo] = useState(true);
+  console.log(language);
+  console.log(isTrue);
 
   return (
     <header className="containerWidth">

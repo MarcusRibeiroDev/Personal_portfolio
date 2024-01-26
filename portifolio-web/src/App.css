@@ -4,3 +4,11 @@
     right: 0;
     height: 4rem;
 }
+
+@media (max-width: 425px) {
+    #whatsapp {
+        position: fixed;
+        margin: 2.5rem;
+        height: 6rem;
+    }
+}

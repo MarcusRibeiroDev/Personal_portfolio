@@ -49,3 +49,11 @@ li {
 .toggle-container.true .toggle-ball {
     transform: translateX(2.5rem); /* 40px em rem */
 }
+
+@media (max-width: 370px) {
+
+    .custom-a {
+        margin: 0 0.5rem;
+    }
+    
+}

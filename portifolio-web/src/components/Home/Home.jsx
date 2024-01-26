@@ -1,28 +1,7 @@
 // CSS
 import './Home.css';
 
-// Hooks
-//import { useState, useEffect } from 'react';
-
 const Home = () => {
-  // Método para checar tamanho da tela e trocar para versão mobile
-  /*
-  const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
-    const handleResize = () => {
-      const windowWidth = window.innerWidth;
-      setIsMobile(windowWidth <= 425);
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    handleResize();
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);*/
-
   return (
     <main className="Home containerWidth">
       <div className="containerHome">
