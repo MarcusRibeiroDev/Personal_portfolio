@@ -5,6 +5,7 @@ import './Navbar.css';
 import { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 
+// Context
 import { StateContext } from '../../Contexts/languagePage';
 
 const Navbar = () => {
@@ -16,13 +17,14 @@ const Navbar = () => {
     setLanguage(!isTrue);
   };
 
-  console.log(language);
-  console.log(isTrue);
-
   return (
     <header className="containerWidth">
-      <div className={`toggle-container ${isTrue ? 'true' : ''}`} onClick={toggleState}>
-        <div className="toggle-ball"></div>
+      <div className="d-flex text-center">
+        <div className={`toggle-container ${isTrue ? 'true' : ''}`} onClick={toggleState}>
+          <div className="toggle-ball"></div>
+        </div>
+        {!language && <p className="ball-name">PT-BR</p>}
+        {language && <p className="ball-name">EN-US</p>}
       </div>
       <nav className="nav navbar">
         <ul className="nav nav-tabs list-unstyled d-flex my-1">
@@ -32,19 +34,40 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="about" className="nav-link custom-a">
-              Sobre mim
-            </Link>
+            {!language && (
+              <Link to="about" className="nav-link custom-a">
+                Sobre mim
+              </Link>
+            )}
+            {language && (
+              <Link to="about" className="nav-link custom-a">
+                About me
+              </Link>
+            )}
           </li>
           <li className="nav-item">
-            <Link to="projects" className="nav-link custom-a">
-              Experiência
-            </Link>
+            {!language && (
+              <Link to="projects" className="nav-link custom-a">
+                Experiência
+              </Link>
+            )}
+            {language && (
+              <Link to="projects" className="nav-link custom-a">
+                Experience
+              </Link>
+            )}
           </li>
           <li className="nav-item">
-            <Link to="contact" className="nav-link custom-a">
-              Contato
-            </Link>
+            {!language && (
+              <Link to="contact" className="nav-link custom-a">
+                Contato
+              </Link>
+            )}
+            {language && (
+              <Link to="contact" className="nav-link custom-a">
+                Contact
+              </Link>
+            )}
           </li>
         </ul>
       </nav>

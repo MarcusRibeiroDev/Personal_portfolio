@@ -11,7 +11,7 @@ li {
 
 .custom-a{
     text-decoration: none;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0 2rem;
     color: rgb(15, 15, 15);
     font-weight: 600;
@@ -29,31 +29,45 @@ li {
 
 
 .toggle-container {
-    width: 4.375rem; /* 70px em rem */
-    height: 1.875rem; /* 30px em rem */
-    border-radius: 0.9375rem; /* 15px em rem */
-    background-color: #000000;
+    width: 4.375rem;
+    height: 1.875rem;
+    border-radius: 0.9375rem;
+    background-color: #000000af;
     cursor: pointer;
     overflow: hidden;
 }
   
 .toggle-ball {
     position: absolute;
-    width: 1.875rem; /* 30px em rem */
-    height: 1.875rem; /* 30px em rem */
-    border-radius: 0.9375rem; /* 15px em rem */
-    background-color: #fff;
+    width: 1.875rem;
+    height: 1.875rem;
+    border-radius: 0.9375rem;
+    background-image: url('../../assets/images/Brazil-Flag.jpg');
+    background-position: center;
+    background-size: cover;
     transition: transform 0.3s ease-in-out;
+    border: 2px solid rgb(0, 230, 0);
 }
   
 .toggle-container.true .toggle-ball {
-    transform: translateX(2.5rem); /* 40px em rem */
+    transform: translateX(2.5rem);
+    background-image: url('../../assets/images/USA-Flag.jpg');
+    background-position: center;
+    background-size: cover;
+    border: 2px solid white;
 }
 
-@media (max-width: 370px) {
+.ball-name{
+    font-size: 1rem;
+    font-weight: 700;
+    padding-left: 4px;
+}
+
+@media (max-width: 390px) {
 
     .custom-a {
         margin: 0 0.5rem;
+        font-size: 1.2rem;
     }
-    
+
 }

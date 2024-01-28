@@ -8,7 +8,7 @@
 
 .containerHome {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
 }
 
@@ -19,7 +19,7 @@ span {
 }
 
 p {
-    font-family: 'Lato', sans-serif !important;
+    font-family: 'Roboto', sans-serif !important;
 }
 
 video {
@@ -32,16 +32,16 @@ video {
     display: inline-block;
     font-size: 1.5em;
     animation: bounce 0.5s infinite alternate;
-  }
+}
   
-  @keyframes bounce {
+@keyframes bounce {
     0% {
       transform: translateY(0);
     }
     100% {
       transform: translateY(-10px);
     }
-  }
+}
 
 
 /* Estilos para telas menores que 1024px */

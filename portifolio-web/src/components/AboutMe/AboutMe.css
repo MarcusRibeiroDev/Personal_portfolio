@@ -1,3 +1,24 @@
 .AboutMe {
-    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fffbf2;
+}
+
+.me-photo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    text-align: start;
+    margin: 60px 0;
+    gap: 20px;
+    font-size: 1rem;
+}
+
+.me-photo img {
+    height: 30rem;
+    border-radius: 6px;
+    margin: 0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
