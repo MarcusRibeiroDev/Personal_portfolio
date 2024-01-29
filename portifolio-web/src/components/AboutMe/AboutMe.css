@@ -9,7 +9,7 @@
 .me-photo {
     display: flex;
     justify-content: flex-start;
-    align-items: start;
+    align-items: center;
     text-align: start;
     margin: 60px 0;
     gap: 20px;
