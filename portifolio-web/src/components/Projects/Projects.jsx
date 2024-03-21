@@ -6,6 +6,7 @@ import './Projects.css';
 
 // Images
 import cellTablet from '../../assets/images/Cell_Tablet.png';
+import thumb_libfree from '../../assets/images/thumb-libfree-1.jpg';
 
 const Projects = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -16,24 +17,32 @@ const Projects = () => {
       purpose: 'Cliente',
       description: 'Site para fazer pedidos em um lanchonete',
       altImage: 'Thumb do projeto de lanchonete',
+      imgLink: cellTablet,
+      linkPages: '#',
     },
     {
       id: 2,
       purpose: 'Cliente',
-      description: 'Site para destribuição de e-books e audiobooks',
+      description: 'Site para ler livros e ouvir audiobooks gratuitos',
       altImage: 'Thumb do projeto de e-books e audiobooks',
+      imgLink: thumb_libfree,
+      linkPages: 'https://marcusribeirodev.github.io/library_free/',
     },
     {
       id: 3,
       purpose: 'Estudo',
       description: 'E-commerce de loja de sapatos',
       altImage: 'Thumb do projeto de loja de sapatos',
+      imgLink: cellTablet,
+      linkPages: '#',
     },
     {
       id: 4,
       purpose: 'Estudo',
       description: 'Blog pessoal',
       altImage: 'Thumb do projeto de blog',
+      imgLink: cellTablet,
+      linkPages: '#',
     },
   ];
 
@@ -61,8 +70,8 @@ const Projects = () => {
         >
           {projectsInfo.map((project) => (
             <div key={project.id} className={!isMobile ? 'col colCss' : 'imgMobile'}>
-              <a href="#">
-                <img src={cellTablet} alt={project.altImage} />
+              <a href={project.linkPages} target="_blank" rel="noreferrer">
+                <img src={project.imgLink} alt={project.altImage} />
               </a>
               <h3>{project.purpose}</h3>
               <p>{project.description}</p>
